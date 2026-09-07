@@ -33,7 +33,12 @@ agregarObservador(observador: Observador): void {
   for (const observador of this.observadores) {
     observador.notificar(this.nombre, nuevoEstado);
 
-    
+
   }
   }
 }
+
+const soporte = new Soporte();
+const equipo = new Equipo("Notebook HP", "Portátil", "disponible");
+equipo.agregarObservador(soporte);
+equipo.cambiarEstado("en reparación");
