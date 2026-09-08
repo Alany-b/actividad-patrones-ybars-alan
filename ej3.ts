@@ -1,3 +1,7 @@
+// Interfaz que define el "contrato" que debe cumplir cualquier observador.
+// Equipo va a depender ÚNICAMENTE de esta interfaz, nunca de una clase concreta,
+// así se pueden agregar nuevos tipos de observador (mail, log, etc.) sin tocar Equipo.
+
 interface Observador {
   notificar(nombreEquipo: string, nuevoEstado: string): void;
 }
